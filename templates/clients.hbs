@@ -1,0 +1,10 @@
+<h1>Clients</h1>
+<hr>
+
+<ul>
+  {{#each client in model}}
+    <li>{{#link-to 'client' client}}{{client.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{#link-to 'new-client' classNames="btn btn-primary"}}New Client{{/link-to}}
