@@ -1,13 +1,13 @@
 <h1>New Client</h1>
 <form>
   <div class="form-group">
-    <label for="name">Name</label>
-    {{input value=name id="name" class="form-control"}}
+    <label for="name"></label>
+    {{input value=name id="name" class="form-control" placeholder="Enter name:"}}
   </div>
 
   <div class="form-group">
-    <label for="email">Email</label>
-    {{input value=email id="email" class="form-control"}}
+    <label for="email"></label>
+    {{input value=email id="email" class="form-control" placeholder="Enter Email:"}}
   </div>
 
   <button class="btn btn-success" {{action 'save'}}>Save</button>

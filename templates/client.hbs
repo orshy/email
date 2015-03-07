@@ -12,13 +12,12 @@
       <label for="email">Email</label>
       {{input value=email id="email" class="form-control"}}
     </div>
-
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
   </form>
 {{else}}
   <p>{{body}}</p>
 
-  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-warning" {{action 'edit'}}>Edit</button>
 {{/if}}
 
 {{outlet}}
@@ -33,7 +32,7 @@
     To: {{email.to}}
     <br>
     <button class="btn btn-xs btn-primary" {{action 'details'}}>more</button>
-    <button class="btn btn-xs btn-danger" {{action 'delete'}}>more</button>
+    <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
   </p>
   {{#if email.isShowing}}
     {{email.email}}
