@@ -1,5 +1,4 @@
-<h1>{{email}}</h1>
-<hr>
+<h4>Name: {{name}}<br>Email: {{email}}</h4>
 
 {{#if isEditing}}
   <form>
@@ -17,19 +16,19 @@
 {{else}}
   <p>{{body}}</p>
 
-  <button class="btn btn-warning" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-xs btn-danger" {{action 'edit'}}>Edit</button>
 {{/if}}
 
 {{outlet}}
 
-<h2>Emails:</h2>
+<h3>Emails:</h3>
 
 {{#each email in emails itemController="email"}}
   <hr>
   <p>
-    Subject: {{email.subject}}
-    <br>
     To: {{email.to}}
+    <br>
+    Subject: {{email.subject}}
     <br>
     <button class="btn btn-xs btn-info" {{action 'details'}}>more</button>
     <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
@@ -40,4 +39,4 @@
   <hr>
 {{/each}}
 
-<p>{{#link-to 'new-email' this class="btn btn-primary"}}New email{{/link-to}}</p>
+<p>{{#link-to 'new-email' this class="btn btn-xs btn-primary"}}New email{{/link-to}}</p>
