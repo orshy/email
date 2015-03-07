@@ -21,10 +21,10 @@
 
 {{outlet}}
 
-<h3>Emails:</h3>
+<h4>Email History:</h4>
 
 {{#each email in emails itemController="email"}}
-  <hr>
+  <br>
   <p>
     To: {{email.to}}
     <br>
@@ -36,7 +36,7 @@
   {{#if email.isShowing}}
     {{email.email}}
   {{/if}}
-  <hr>
+  <br>
 {{/each}}
 
-<p>{{#link-to 'new-email' this class="btn btn-xs btn-primary"}}New email{{/link-to}}</p>
+<p>{{#link-to 'new-email' this class="btn btn-small btn-primary"}}Compose New email{{/link-to}}</p>
