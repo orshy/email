@@ -1,4 +1,4 @@
-Email.UserController = Ember.ObjectController.extend({
+Email.ClientController = Ember.ObjectController.extend({
   isEditing: false,
   actions: {
     edit: function() {
