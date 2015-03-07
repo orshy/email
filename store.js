@@ -1,2 +1,2 @@
 Email.ApplicationSerializer = DS.LSSerializer.extend();
-Email.ApplicationAdapter.extend();
+Email.ApplicationAdapter = DS.LSAdapter.extend();
